@@ -38,12 +38,12 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Rotate(new Vector3(0, 1, 0) * Time.deltaTime * rotationSpeed, Space.World);
+            playerBody.velocity += transform.right * speed;
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Rotate(new Vector3(0, -1, 0) * Time.deltaTime * rotationSpeed, Space.World);
+            playerBody.velocity -= transform.right * speed;
         }
     }
 

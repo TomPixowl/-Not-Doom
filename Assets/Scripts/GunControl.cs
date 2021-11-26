@@ -5,15 +5,15 @@ using UnityEngine;
 public class GunControl : MonoBehaviour
 {
 
-    private bool shot;
     [SerializeField] Rigidbody bulletPreset;
     [SerializeField] float speed = 200;
     [SerializeField] int bulletDuration;
-    public Rigidbody bullet;
+    [SerializeField] Transform anchorPoint;
+    private Rigidbody bullet;
     // Start is called before the first frame update
     void Start()
     {
-        shot = false;   
+
     }
 
     // Update is called once per frame
@@ -27,13 +27,12 @@ public class GunControl : MonoBehaviour
 
     void shoot()
     {
-        Debug.Log("Disparo");
 
         Vector3 currentPos;
 
         for (int i = 0; i < 3; i++)
         {
-            currentPos = transform.position;
+            currentPos = anchorPoint.transform.position;
             switch (i)
             {
                 case 0:
@@ -48,7 +47,7 @@ public class GunControl : MonoBehaviour
                 default:
                     break;
             }
-            bullet.velocity = transform.up * speed;
+            bullet.velocity = anchorPoint.transform.up * speed;
             Destroy(bullet.gameObject, bulletDuration);
         }
     }
