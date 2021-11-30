@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Bullets : MonoBehaviour
 {
-    // Start is called before the first frame update
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         
@@ -21,6 +21,7 @@ public class Bullets : MonoBehaviour
         if(collision.gameObject.tag == "target")
         {
             Destroy(collision.gameObject);
+            FindObjectOfType<GameManager>().RemainingTargets--;
         }
     }
 }

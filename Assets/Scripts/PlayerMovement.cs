@@ -7,7 +7,6 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody playerBody;
     [SerializeField] float speed;
     [SerializeField] float jumpSpeed;
-    [SerializeField] float rotationSpeed;
     private bool playerJumpLimit;
 
     void Start()
@@ -16,11 +15,10 @@ public class PlayerMovement : MonoBehaviour
         playerJumpLimit = false;
     }
         
-    // Update is called once per frame
+
     void Update()
     {
         Movement();
-        if (Input.GetKeyDown(KeyCode.Mouse0)) Fire();
         if (Input.GetKeyDown(KeyCode.Space) && !playerJumpLimit) Jump();
     }
 
@@ -47,10 +45,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void Fire()
-    {
-        
-    }
     void Jump()
     {
         playerBody.velocity += transform.up * jumpSpeed;

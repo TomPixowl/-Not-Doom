@@ -4,19 +4,18 @@ using UnityEngine;
 
 public class GunControl : MonoBehaviour
 {
-
     [SerializeField] Rigidbody bulletPreset;
     [SerializeField] float speed = 200;
     [SerializeField] int bulletDuration;
     [SerializeField] Transform anchorPoint;
     private Rigidbody bullet;
-    // Start is called before the first frame update
+
     void Start()
     {
 
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
@@ -47,7 +46,7 @@ public class GunControl : MonoBehaviour
                 default:
                     break;
             }
-            bullet.velocity = anchorPoint.transform.up * speed;
+            bullet.velocity = anchorPoint.transform.forward * speed;
             Destroy(bullet.gameObject, bulletDuration);
         }
     }
