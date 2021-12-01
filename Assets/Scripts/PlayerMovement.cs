@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] float jumpSpeed;
     private bool playerJumpLimit;
+    [SerializeField] BoxCollider platformColl;
+    private Collision savedCollision;
 
     void Start()
     {
@@ -52,7 +54,20 @@ public class PlayerMovement : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        playerJumpLimit = false;
+        if(collision.transform.tag == "floor" || collision.transform.tag == "platform") playerJumpLimit = false;
+
+        if(collision.transform.tag == "platform")
+        {
+            Vector3 platPos = collision.transform.position;
+            //resuelto muy cavernicola
+            if (savedCollision != collision)
+            {
+                playerBody.position = (platPos + new Vector3(0, 15, 0));
+            }
+            playerBody.velocity = Vector3.zero;
+            savedCollision = collision;
+
+        }
     }
 }
 

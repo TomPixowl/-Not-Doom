@@ -253,7 +253,7 @@ GameObject:
   - component: {fileID: 219674864}
   m_Layer: 0
   m_Name: Terrain_0_0_5dc20243-e509-4300-a9ea-7125b3acb61b
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -563,8 +563,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2853cf2f1cbb14407aa08dab614628f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 3
   jumpSpeed: 100
+  platformColl: {fileID: 0}
 --- !u!54 &403274019
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1405,7 +1406,7 @@ GameObject:
   - component: {fileID: 2009147803}
   m_Layer: 0
   m_Name: TerrainGroup_0
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
