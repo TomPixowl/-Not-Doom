@@ -1,16 +1,16 @@
 ﻿<Properties StartupConfiguration="{C40CBA8B-8F16-248E-C5C5-D772D521AAC4}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="31" Column="62" />
-      <File FileName="Assets/Scripts/GunControl.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Bullets.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GameManager.cs" Line="9" Column="1" />
-      <File FileName="Assets/Scripts/MouseLook.cs" Line="19" Column="1" />
+      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="16" Column="6" />
+      <File FileName="Assets/Scripts/GunControl.cs" />
+      <File FileName="Assets/Scripts/Bullets.cs" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="28" Column="130" />
+      <File FileName="Assets/Scripts/MouseLook.cs" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7a42bd76-300e-4561-a906-38d715db23e5" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b5c24d55-5bd3-4281-b939-c5cb53256dfd" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

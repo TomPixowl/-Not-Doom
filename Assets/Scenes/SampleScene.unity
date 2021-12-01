@@ -153,9 +153,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   presetTarget: {fileID: 6628439045774210287, guid: f6ebba2a75d3c4a39ad74c28de572fe2, type: 3}
+  presetPlatform: {fileID: 6404075987958968557, guid: 48b98979b41784dfa8f77debed9cd166, type: 3}
   TimeUI: {fileID: 265764550}
   TargetRemainingUI: {fileID: 1973829753}
-  maxTargets: 10
+  maxTargets: 8
+  maxPlatforms: 5
   RemainingTargets: 0
 --- !u!4 &198331783
 Transform:
@@ -561,8 +563,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2853cf2f1cbb14407aa08dab614628f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.42
-  jumpSpeed: 20
+  speed: 2
+  jumpSpeed: 100
 --- !u!54 &403274019
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -577,7 +579,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!1 &705507993
 GameObject:
@@ -1042,9 +1044,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPreset: {fileID: 4605093388673828262, guid: 739a203c714b54eb7a15a9db1b594e17, type: 3}
-  speed: 200
+  speed: 300
   bulletDuration: 1
   anchorPoint: {fileID: 1517022426}
+  hookRange: 200
+  mainCam: {fileID: 963194227}
+  wireHookPreset: {fileID: 4438776090093761711, guid: 0723ec53030fb47fcb74f4ec805b003c, type: 3}
+  playerBody: {fileID: 403274019}
+  hookSpeed: 600
 --- !u!1 &1517022425
 GameObject:
   m_ObjectHideFlags: 0
@@ -1212,7 +1219,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1844581596
 MonoBehaviour:
@@ -1226,15 +1233,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: cfd0aa1425a35452ebe611724cb0081a, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 23a89646479fe4ebf9e44ea2dfcda7e5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

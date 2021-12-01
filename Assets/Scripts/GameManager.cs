@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
 
         for (int i = 0; i < maxPlatforms; i++)
         {
-            Vector3 pos = new Vector3(Random.Range(150, 360), Random.Range(50, 100), Random.Range(115, 420));
+            Vector3 pos = new Vector3(Random.Range(150, 360), Random.Range(50, 100), Random.Range(115, 420)); //Ponerle el modelo
             Instantiate(presetPlatform, pos, Quaternion.identity);
         }
     }

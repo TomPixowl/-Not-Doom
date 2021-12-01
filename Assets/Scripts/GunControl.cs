@@ -9,6 +9,11 @@ public class GunControl : MonoBehaviour
     [SerializeField] int bulletDuration;
     [SerializeField] Transform anchorPoint;
     private Rigidbody bullet;
+    [SerializeField] float hookRange;
+    [SerializeField] Camera mainCam;
+    [SerializeField] GameObject wireHookPreset;
+    [SerializeField] Rigidbody playerBody;
+    [SerializeField] float hookSpeed = 200;
 
     void Start()
     {
@@ -21,6 +26,11 @@ public class GunControl : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             shoot();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            hook();
         }
     }
 
@@ -54,6 +64,21 @@ public class GunControl : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Destroy(collision.gameObject);    
+    }
+
+    private void hook()
+    {
+        RaycastHit hitInfo;
+        if(Physics.Raycast(mainCam.transform.position,mainCam.transform.forward,out hitInfo, hookRange))
+        {
+            //Instantiate(wireHookPreset, anchorPoint.position, anchorPoint.rotation);
+
+            if(hitInfo.transform.tag == "platform")
+            {
+                playerBody.velocity = mainCam.transform.forward * hookSpeed;
+            }
+            
+        }
     }
 
 }
