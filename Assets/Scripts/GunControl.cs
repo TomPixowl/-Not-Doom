@@ -11,13 +11,14 @@ public class GunControl : MonoBehaviour
     private Rigidbody bullet;
     [SerializeField] float hookRange;
     [SerializeField] Camera mainCam;
-    [SerializeField] GameObject wireHookPreset;
     [SerializeField] Rigidbody playerBody;
     [SerializeField] float hookSpeed = 200;
+    [SerializeField] LineRenderer wireHook;
+
 
     void Start()
     {
-
+        
     }
 
 
@@ -32,33 +33,22 @@ public class GunControl : MonoBehaviour
         {
             hook();
         }
+
+
+        if (wireHook.GetPosition(0) != Vector3.zero)
+        {
+            StartCoroutine(Example());
+        }
     }
 
     void shoot()
     {
-
         Vector3 currentPos;
-
-        for (int i = 0; i < 3; i++)
-        {
-            currentPos = anchorPoint.transform.position;
-            switch (i)
-            {
-                case 0:
-                    bullet = Instantiate(bulletPreset, currentPos, Quaternion.identity);
-                    break;
-                case 1:
-                    bullet = Instantiate(bulletPreset, currentPos += (Vector3.forward * 2), Quaternion.identity);
-                    break;
-                case 2:
-                    bullet = Instantiate(bulletPreset, currentPos += (Vector3.back * 2), Quaternion.identity);
-                    break;
-                default:
-                    break;
-            }
-            bullet.velocity = anchorPoint.transform.forward * speed;
-            Destroy(bullet.gameObject, bulletDuration);
-        }
+        currentPos = anchorPoint.transform.position;
+        bullet = Instantiate(bulletPreset, currentPos, Quaternion.identity);
+        bullet.velocity = anchorPoint.transform.forward * speed;
+        Destroy(bullet.gameObject, bulletDuration);
+         
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -71,14 +61,25 @@ public class GunControl : MonoBehaviour
         RaycastHit hitInfo;
         if(Physics.Raycast(mainCam.transform.position,mainCam.transform.forward,out hitInfo, hookRange))
         {
-            //Instantiate(wireHookPreset, anchorPoint.position, anchorPoint.rotation);
 
             if(hitInfo.transform.tag == "platform")
             {
+                wireHook.SetPosition(0, anchorPoint.position);
+                wireHook.SetPosition(1, hitInfo.transform.position);
+                
                 playerBody.velocity = mainCam.transform.forward * hookSpeed;
             }
             
         }
+
+    }
+
+    IEnumerator Example()
+    {
+        yield return new WaitForSecondsRealtime(1);
+        wireHook.SetPosition(0, Vector3.zero);
+        wireHook.SetPosition(1, Vector3.zero);
+
     }
 
 }

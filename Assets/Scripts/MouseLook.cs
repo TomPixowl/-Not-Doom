@@ -5,7 +5,6 @@ using UnityEngine;
 public class MouseLook : MonoBehaviour
 {
     [SerializeField] float mouseSensitvity = 100f;
-
     [SerializeField] Transform playerBody;
     [SerializeField] Transform anchorPoint;
 

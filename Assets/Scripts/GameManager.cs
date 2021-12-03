@@ -18,14 +18,14 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < maxTargets; i++)
         {
-            Vector3 pos = new Vector3(Random.Range(150, 360), Random.Range(20,100), Random.Range(115, 420));
+            Vector3 pos = new Vector3(Random.Range(150, 360), Random.Range(20, 100), Random.Range(115, 420));
             Instantiate(presetTarget, pos, Quaternion.identity);
         }
         RemainingTargets = maxTargets;
 
         for (int i = 0; i < maxPlatforms; i++)
         {
-            Vector3 pos = new Vector3(Random.Range(150, 360), Random.Range(50, 100), Random.Range(115, 420)); //Ponerle el modelo
+            Vector3 pos = new Vector3(Random.Range(150, 360), Random.Range(50, 100), Random.Range(115, 420));
             Instantiate(presetPlatform, pos, Quaternion.identity);
         }
     }
@@ -33,19 +33,24 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-       
         TimerUpdater();
         TargetUpdater();
+
     }
 
     void TimerUpdater()
     {
-        timeCounter = (int) Time.realtimeSinceStartup;
+        timeCounter = (int)Time.realtimeSinceStartup;
         TimeUI.text = "Time: " + (timeCounter);
     }
 
     void TargetUpdater()
     {
         TargetRemainingUI.text = "Remaining Targets: " + RemainingTargets + "/" + maxTargets;
+    }
+
+    void destroyWireHooks() {
+
+
     }
 }
