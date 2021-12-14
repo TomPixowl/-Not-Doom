@@ -53,13 +53,13 @@
     <UnityVersion>2020.3.19f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets/Scripts/Menu/Orb.cs" />
+    <Compile Include="Assets/Scripts/Menu/TextControl.cs" />
     <Compile Include="Assets/Scripts/Gameplay/GameManager.cs" />
     <Compile Include="Assets/Scripts/Gameplay/MouseLook.cs" />
     <Compile Include="Assets/Scripts/Gameplay/PlayerMovement.cs" />
     <Compile Include="Assets/Scripts/Gameplay/Bullets.cs" />
     <Compile Include="Assets/Scripts/Gameplay/GunControl.cs" />
-    <Compile Include="Assets/Scripts/Menu/Orb.cs" />
-    <Compile Include="Assets/Scripts/Menu/TextControl.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Junk/Samples/Terrain Tools/0.1.0-preview/Terrain Assets/ThirdPartyNotices.txt" />

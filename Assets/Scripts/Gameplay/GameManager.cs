@@ -13,8 +13,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] int maxTargets;
     [SerializeField] int maxPlatforms;
     public int RemainingTargets;
+    [SerializeField] Light light;
+    [SerializeField] Light presetLight;
 
-    void Awake()
+    void Start()
     {
         for (int i = 0; i < maxTargets; i++)
         {
@@ -28,6 +30,8 @@ public class GameManager : MonoBehaviour
             Vector3 pos = new Vector3(Random.Range(150, 360), Random.Range(50, 100), Random.Range(115, 420));
             Instantiate(presetPlatform, pos, Quaternion.identity);
         }
+
+        light = presetLight;
     }
 
 

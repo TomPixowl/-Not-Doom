@@ -12,6 +12,7 @@ public class Orb : MonoBehaviour
     [SerializeField] int expandFrameAmount;
     [SerializeField] TextMeshProUGUI startTxt;
     [SerializeField] Canvas menuCanvas;
+    [SerializeField] GameObject Cube;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,7 @@ public class Orb : MonoBehaviour
         rotationY = rotationY - 0.8f;
         rotationZ = rotationY / 2;
         transform.localRotation = Quaternion.Euler(0f, rotationY, rotationZ);
+        Cube.transform.localRotation = Quaternion.Euler(0f, -rotationY, -rotationZ);
         onButtonPress();
     }
 
@@ -33,6 +35,7 @@ public class Orb : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return) && !enterPressed)
         {
+            Cube.transform.localScale = Vector3.zero;
             scalingFramesLeft = expandFrameAmount;
         }
 

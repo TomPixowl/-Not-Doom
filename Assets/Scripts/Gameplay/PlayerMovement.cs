@@ -8,7 +8,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] float jumpSpeed;
     private bool playerJumpLimit;
-    private Collision savedCollision;
 
     void Start()
     {
