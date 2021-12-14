@@ -93,15 +93,15 @@ public class TextControl : MonoBehaviour
                     return;
                 case -128:
                     Debug.LogError("RECORDS");
-
+                    //Mostrar records guardados de players anteriores, agregar "save name" al terminar el nivel
                     return;
                 case -216:
                     Debug.LogError("OPTION");
-
+                    //Cambio de color de crosshair, sonido, music, difficulty?
                     return;
                 case -294:
                     Debug.LogError("EXIT GAME");
-
+                    //salir del juego
                     return;
                 default:
                     return;
