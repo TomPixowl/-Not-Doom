@@ -1,14 +1,14 @@
 ﻿<Properties StartupConfiguration="{C40CBA8B-8F16-248E-C5C5-D772D521AAC4}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/End Screen/endOrb.cs">
     <Files>
-      <File FileName="Assets/Scripts/Menu/Orb.cs" Line="19" Column="1" />
-      <File FileName="Assets/Scripts/Menu/TextControl.cs" />
-      <File FileName="Assets/Scripts/Gameplay/MouseLook.cs" />
-      <File FileName="Assets/Scripts/Gameplay/Bullets.cs" />
+      <File FileName="Assets/Scripts/Menu/Orb.cs" Line="47" Column="1" />
+      <File FileName="Assets/Scripts/Menu/TextControl.cs" Line="88" Column="28" />
+      <File FileName="Assets/Scripts/Gameplay/MouseLook.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Gameplay/Bullets.cs" Line="24" Column="1" />
       <File FileName="Assets/Scripts/Gameplay/GameManager.cs" Line="59" Column="6" />
-      <File FileName="Assets/Scripts/Gameplay/GunControl.cs" />
-      <File FileName="Assets/Scripts/Gameplay/PlayerMovement.cs" />
-      <File FileName="Assets/Scripts/End Screen/endOrb.cs" Line="6" Column="17" />
+      <File FileName="Assets/Scripts/Gameplay/GunControl.cs" Line="17" Column="1" />
+      <File FileName="Assets/Scripts/Gameplay/PlayerMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/End Screen/endOrb.cs" Line="26" Column="47" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
@@ -16,7 +16,7 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="65ab8eb9-c534-4682-ac9d-328ace7a7d6a" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/tomi/Documents/GitHub/(Not) Doom/Assets/Scripts/Menu/TextControl.cs" relfile="Assets/Scripts/Menu/TextControl.cs" line="91" column="1" />
+      <Breakpoint file="/Users/tomi/Documents/GitHub/(Not) Doom/Assets/Scripts/Menu/TextControl.cs" relfile="Assets/Scripts/Menu/TextControl.cs" line="87" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
