@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class GameManager : MonoBehaviour
@@ -16,7 +17,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] Light light;
     [SerializeField] Light presetLight;
 
-    void Start()
+    void Awake()
     {
         for (int i = 0; i < maxTargets; i++)
         {
@@ -35,11 +36,23 @@ public class GameManager : MonoBehaviour
     }
 
 
+
     void Update()
     {
+       
         TimerUpdater();
         TargetUpdater();
+        light = presetLight;
+        if(RemainingTargets <= 0)
+        {
+            EndGame();
+        }
 
+    }
+
+    void EndGame()
+    {
+        SceneManager.LoadScene("End Screen", LoadSceneMode.Single);
     }
 
     void TimerUpdater()
@@ -53,8 +66,4 @@ public class GameManager : MonoBehaviour
         TargetRemainingUI.text = "Remaining Targets: " + RemainingTargets + "/" + maxTargets;
     }
 
-    void destroyWireHooks() {
-
-
-    }
 }

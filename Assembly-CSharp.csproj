@@ -60,6 +60,7 @@
     <Compile Include="Assets/Scripts/Gameplay/PlayerMovement.cs" />
     <Compile Include="Assets/Scripts/Gameplay/Bullets.cs" />
     <Compile Include="Assets/Scripts/Gameplay/GunControl.cs" />
+    <Compile Include="Assets/Scripts/End Screen/endOrb.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Junk/Samples/Terrain Tools/0.1.0-preview/Terrain Assets/ThirdPartyNotices.txt" />

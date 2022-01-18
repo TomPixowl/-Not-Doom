@@ -1,25 +1,19 @@
 ﻿<Properties StartupConfiguration="{C40CBA8B-8F16-248E-C5C5-D772D521AAC4}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Gameplay/PlayerMovement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/End Screen/endOrb.cs">
     <Files>
-      <File FileName="Assets/Scripts/Menu/Orb.cs" Line="37" Column="10" />
-      <File FileName="Assets/Scripts/Gameplay/MouseLook.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Menu/TextControl.cs" Line="91" Column="77" />
-      <File FileName="Assets/Scripts/Gameplay/Bullets.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Gameplay/GameManager.cs" Line="36" Column="6" />
-      <File FileName="Assets/Scripts/Gameplay/GunControl.cs" Line="40" Column="13" />
-      <File FileName="Assets/Scripts/Gameplay/PlayerMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Menu/Orb.cs" Line="19" Column="1" />
+      <File FileName="Assets/Scripts/Menu/TextControl.cs" />
+      <File FileName="Assets/Scripts/Gameplay/MouseLook.cs" />
+      <File FileName="Assets/Scripts/Gameplay/Bullets.cs" />
+      <File FileName="Assets/Scripts/Gameplay/GameManager.cs" Line="59" Column="6" />
+      <File FileName="Assets/Scripts/Gameplay/GunControl.cs" />
+      <File FileName="Assets/Scripts/Gameplay/PlayerMovement.cs" />
+      <File FileName="Assets/Scripts/End Screen/endOrb.cs" Line="6" Column="17" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="(Not) Doom" expanded="True" selected="True" />
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="10b9a090-5eb8-4dd9-ab61-8a73448a7c7d" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="65ab8eb9-c534-4682-ac9d-328ace7a7d6a" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/tomi/Documents/GitHub/(Not) Doom/Assets/Scripts/Menu/TextControl.cs" relfile="Assets/Scripts/Menu/TextControl.cs" line="91" column="1" />

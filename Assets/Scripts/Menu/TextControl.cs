@@ -8,17 +8,14 @@ public class TextControl : MonoBehaviour
     [SerializeField] Transform arrowPos;
     [SerializeField] GameObject Cube;
     bool menuOn = false;
-    [SerializeField] Scene gameplayScene;
-    [SerializeField] Scene menuScene;
-    
 
-    // Start is called before the first frame update
+
     void Start()
     {
 
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if(Cube.transform.localScale == Vector3.zero)
@@ -87,9 +84,7 @@ public class TextControl : MonoBehaviour
             switch (arrowPos.localPosition.y)
             {
                 case -38:
-                    Debug.LogError("GAME");
                     SceneManager.LoadScene("Gameplay",LoadSceneMode.Single);
-
                     return;
                 case -128:
                     Debug.LogError("RECORDS");
@@ -100,8 +95,7 @@ public class TextControl : MonoBehaviour
                     //Cambio de color de crosshair, sonido, music, difficulty?
                     return;
                 case -294:
-                    Debug.LogError("EXIT GAME");
-                    //salir del juego
+                    Application.Quit();
                     return;
                 default:
                     return;

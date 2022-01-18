@@ -16,11 +16,6 @@ public class GunControl : MonoBehaviour
     [SerializeField] LineRenderer wireHook;
 
 
-    void Start()
-    {
-        
-    }
-
 
     void Update()
     {
